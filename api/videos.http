@@ -1,0 +1,35 @@
+@api=http://localhost:5000
+
+
+#========= obtener videos
+GET {{api}}/videos
+
+### ========== obtener un video
+GET {{api}}/videos/636e51cf1b2e451616c1ec49
+
+
+#=========== CREAR VIDEO ===================
+###
+POST {{api}}/videos
+Content-Type: application/json
+
+{
+     "url" : "https://www.youtube.com",
+    "title": "YouTube",
+    "description": "Página de YT"
+}
+
+
+
+### ======== Eliminar un vídeo
+DELETE {{api}}/videos/636e50d97fd2bf9f47167fdd
+
+
+
+### ====== Actualizar un vídeo
+PUT {{api}}/videos/637210c0ee546a5f271e666e
+Content-Type: application/json
+
+{
+    "title": "Pagina inicio de YT"
+}
